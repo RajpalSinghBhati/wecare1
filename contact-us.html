@@ -1,0 +1,395 @@
+
+<html>
+  
+    <html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WeCare</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800%7CLato:300,400,700" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="./ContactUs/css" rel="stylesheet" type="text/css">
+    <link href="./ContactUs/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/slick-slider.css" rel="stylesheet">
+    <link href="css/fancybox.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/color.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="./ContactUs/index.css" rel="stylesheet">
+    
+
+    
+  
+
+  <script type="text/javascript" async="" src="./ContactUs/analytics.js.download"></script><script async="" src="./ContactUs/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-156890281-1');
+</script>
+	
+  <script src="./ContactUs/jquery-1.4.4.min.js.download" type="text/javascript"></script>
+ <script type="text/javascript">
+     function validate() 
+     {
+         if ($("#txtname").val() == "") 
+         {
+             alert("Please enter your name");
+             $("#txtname").focus();
+             return false;
+         }
+                
+
+         if ($("#txtemail").val() == "")
+         {
+             alert("Please enter your Email-ID");
+             $("#txtemail").focus();
+             return false;
+         }
+         if (document.getElementById("txtemail").value != "") 
+         {
+             var mail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/; ;
+             if (document.getElementById("txtemail").value.match(mail)) 
+             {
+
+             }
+             else {
+                 alert("Please enter Valid Email ID");
+                 $("#txtemail").focus();
+                 return false;
+             }
+         }
+
+
+         if ($("#txtcomment").val() == "") {
+             alert("Please enter your enquiry");
+             $("#txtcomment").focus();
+             return false;
+         }
+
+         $.ajax({
+
+             type: 'POST',
+
+             contentType: "application/json; charset=utf-8",
+
+             url: 'insert.aspx/Insertcontact',
+
+             data: "{'Name':'" + document.getElementById('txtname').value + "','Mail':'" + document.getElementById('txtemail').value + "','Phone':'" + document.getElementById('txttele').value + "','Address':'" + document.getElementById('txtaddress').value + "','Enquiry':'" + document.getElementById('txtcomment').value + "'}",
+
+             async: false,
+
+             success: function (response) {
+                 document.getElementById('txtname').value = "";
+                 document.getElementById('txtemail').value = "";
+                 document.getElementById('txttele').value = "";
+                 document.getElementById('txtaddress').value = "";
+                 document.getElementById('txtcomment').value = "";
+
+                 alert("Thank You, We will get back to you soon");
+
+             },
+
+             error: function ()
+
+             { alert('Thank You'); }
+
+         });
+
+     }
+
+
+</script>
+
+<style type="text/css">.fancybox-margin{margin-right:18px;}</style></head>
+<body class="">
+	 
+    <div class="careplus-main-wrapper">
+      
+        <header id="careplus-header" class="careplus-header-one">
+            
+           
+            <div class="careplus-main-header">
+                <div class="container">
+                    <div class="row">
+                        <aside class="col-md-3"><a href="index.html" class="careplus-logo"><img src="images/My project (4).png" alt="WeCare" title="WeCare"></a></aside>
+                        <aside class="col-md-9">
+                            <ul class="careplus-infolist">
+                                <li style="padding-top: 9px">
+                                    <i class="careplus-bgcolor-two fa fa-envelope"></i>
+                                    <a href="mailto:enquiry@wecare.com">enquiry@wecare.com</a>
+                                    
+                                </li>
+                                <li>
+                                </li>
+                                     <li>
+                                     <i class="careplus-bgcolor-two fa fa-phone"></i> 
+
+									 <span><a href="tel:1800 666 888">1800 666 888</a></span>
+                                   
+                                </li>
+                            </ul>
+                            <a href="book-now.html" class="careplus-booking-btn careplus-bgcolor-two">Book Appointment</a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+           
+
+           
+            <div class="careplus-navigation-section careplus-bgcolor">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="careplus-navinner">
+                                <nav class="navbar navbar-default">
+                                    <div class="navbar-header">
+                                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                      </button>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                      <ul class="nav navbar-nav">
+                                        <li ><a href="index.html">Home</a></li>
+                                          <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="#">Services</a>
+                                            <ul class="careplus-dropdown-menu">
+                                                <li><a href="health.html">Health Care</a></li>
+                                                <li><a href="daily.html">Daily Care</a></li>
+                                                <li><a href="payment.html">Payment Care</a></li>
+                                                <li><a href="lifestyle.html">Lifestyle Care</a></li>
+                                                <li><a href="emergency.html">Emergency Care</a></li>
+                                            </ul>
+                                        </li>
+                                         <li class="careplus-megamenu-li"><a href="why-us.html">Why Us</a> </li>
+                                    <li class="active" class="careplus-megamenu-li"><a href="contact-us.html">Book Now</a> </li>
+                                      </ul>
+                                    </div>
+                                </nav>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </header>
+       
+
+		
+		<div class="careplus-subheader">
+            <div class="careplus-subheader-image">
+                <span class="careplus-dark-transparent"></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Book Now</h1>
+                            <span>WeCare</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="careplus-breadcrumb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li>Book Now</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<div class="careplus-main-content">
+<div class="container">
+<form>
+<div class="names"><p>Full Name<span style="color:#bc0105; font-size:32px;">*</span></p></div>
+     <div class="names">    
+     <input type="text" placeholder="Enter your name.." class="txtbox" id="txtname" style="padding-left: 10px;"></div>
+    
+     
+      
+     <div class="names"><p>Email ID <span style="color:#bc0105; font-size:32px;">*</span></p></div>
+     <div>
+     <input type="text" class="txtbox" placeholder="Enter your Email ID.." id="txtemail" style="padding-left: 10px;"></div>
+     
+     <div class="names1"><p>Telephone (with country &amp; area  code)</p></div>
+     <div>
+     <input type="text" class="txtbox" id="txttele" placeholder="Enter your Telephone.." style="padding-left: 10px;">
+     </div>
+     <div class="names"><p> Address<span style="color:#bc0105; font-size:32px;">*</span> </p></div>
+     <div>
+     <textarea id="txtaddress" rows="2" cols="50" class="txtbox2" placeholder="Enter your Address.."></textarea>
+     </div>
+     <div class='form-group'><div class='' style=''><label for='LEADCF5'>Choose Services<span style="color:#bc0105; font-size:32px;">*</span></label></div><div class='zcwf_col_fld'><select class='form-control' id='LEADCF5' name='LEADCF5'  >
+        <option value='-None-'>--Select Your Service--</option>
+        <option value='-None-'>Health Care</option>
+        <option value='General&#x20;Enquiry'>Daily Care</option>
+        <option value='Volunteer&#x20;with&#x20;Us'>Payment Care</option>
+        <option value='Partner&#x20;with&#x20;Us'>Emergency Cares</option>
+        <option value='Franchise&#x20;Partner&#x20;(WeCare&#x20;Anchor)'>Lifestyle Care</option>
+    </select><div class='zcwf_col_help'></div></div></div>
+     <div class="names"><p>Enquiry<span style="color:#bc0105; font-size:32px;">*</span></p></div>
+     <div>
+     <textarea id="txtcomment" rows="2" cols="50" placeholder="Enter your Enquiry.." class="txtbox1"></textarea></div>
+ 
+     <div>
+        <input type="button" class="submit" style="cursor:pointer; background:#373333;" value="Submit" onclick="return validate();" id="btnsubmit">
+     </div> </form>
+         
+
+</div>
+</div>
+
+
+
+       
+<div class="careplus-main-content">
+
+    <div class="careplus-main-section">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <div class="col-md-12">
+                                <div class="careplus-fancy-title">
+                                    <h2>Get In Touch</h2>
+                                    <span><small></small><i class="icon-tool5"></i></span>
+                                </div>
+                                <div class="carepluss-contact-us-info">
+                                    <ul class="row">
+                                    
+                                              <li class="col-md-4">
+                                            <div class="carepluss-info">
+                                                <h5>our Location</h5>
+                                                <p><b>WeCare</b><br>
+                                                    #40 A, Queens Street, 6<sup>th</sup> Cross<br>
+                                                </sup> Bengaluru - 560 076<br>
+                                                   
+    
+                                                </p>
+                                                <span><i class="fa fa-map-marker"></i></span>
+                                            </div>
+                                        </li>
+                                        
+                                        
+                                        <li class="col-md-4">
+                                            <div class="carepluss-info">
+                                                <h5>Call Us At</h5>
+                                               
+                                                <p style="    font-family: Consolas, &#39;Andale Mono&#39;, &#39;Lucida Console&#39;, &#39;Lucida Sans Typewriter&#39;, Monaco, &#39;Courier New&#39;, &#39;monospace&#39;;"><a href="tel:+1800 666 8881"></a><br><a href="tel:+1800 666 8884">+1800 666 8884</a></p><br>
+                                                
+                                                <span><i class="fa fa-phone"></i></span>
+                                            </div>
+                                        </li>
+                                         <li class="col-md-4">
+                                            <div class="carepluss-info">
+                                                <h5>Mail Us At</h5>
+                                                <p style=" padding: 0px;"><a href="mailto:enquiry@wecare.com">enquiry@wecare.com</a></p>
+                                               
+                                                <span><i class="fa fa-envelope"></i></span>
+                                            </div>
+                                        </li>
+                               
+                                   
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    </div>
+		
+        <footer id="careplus-footer" class="careplus-footer-one">
+            <span class="careplus-footer-transparent"></span>
+            <div class="careplus-footer-widget">
+                <div class="container">
+                    <div class="row">
+                        
+                        <aside class="col-md-4 widget widget_contact_info">
+                         
+                              <h2 class="careplus-footer-title">Reach Us</h2>
+                           <ul>
+                              <li>
+                                    <h6><i class="fa fa-map-marker"></i> Our Location:</h6><br>
+                                    <span><b>WeCare</b><br>
+                            #40 A, Queens Street, 6<sup>th</sup> Cross<br>
+                           </sup> Bengaluru - 560 076
+</span>
+                                </li>
+                                <li>
+                                    <h6><i class="fa fa-phone"></i> Call Us At:</h6><br>
+                                    <span style="    font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', 'monospace';"><span><a href="tel:+ 1800 666 888">+1800 666 888</a></span>
+                                    
+                                </li>
+                                <li>
+                                    <h6><i class="fa fa-envelope"></i> Mail Us At:</h6><br>
+                             <a href="mailto:enquiry@wecare.com">enquiry@wecare.com</a>
+                                </li>
+                             
+                            </ul>
+                        </aside>
+                       
+                        <aside class="col-md-4 widget widget_useful_link">
+                            <h2 class="careplus-footer-title">Useful Links</h2>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="health.html">Health Care</a></li>
+                                <li><a href="daily.html">Daily Care</a></li>
+                                <li><a href="payment.html">Emergency Care Assistance</a></li>
+                                <li><a href="lifestyle.html">Lifestyle Care</a></li>
+                                <li><a href="emergency.html">Emergency Care</a></li>
+                                <li><a href="why-us.html">Why Us</a></li>
+                                <li><a href="contact-us.html">Book Now</a></li>
+                                <li><a href="book-now.html">Login</a></li>
+                               
+                                
+                            </ul>
+                        </aside>
+                        
+                               <aside class="col-md-4 widget widget_contact_info">
+                            <a href="index.html" class="footer-logo"><img src="images/logo4.png"  alt="WeCare Health Care Services" title="WeCare Care Services"></a>
+                           
+                        </aside>
+                       
+                    </div>
+                </div>
+            </div>
+           
+            
+           
+
+        </footer>
+      
+	<div class="clearfix"></div>
+    </div>
+    
+    
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/slick.slider.min.js"></script>
+    <script type="text/javascript" src="js/isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="js/fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/progressbar.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+
+  </body>
+</html>

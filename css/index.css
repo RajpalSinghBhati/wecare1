@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+ .names p
+{
+display: block;
+	    padding: 20px 0 0px 0;
+	font-size:15px; 	margin-left:20px;
+	}
+	.names1 p
+{
+   display: block;
+  padding: 20px 0 5px 0;
+	font-size:14px;
+	margin-left:20px;
+	}
+	.txtbox
+{	
+    font: 14px;
+	width: 59%;
+	height:35px;
+	margin-left:20px;
+
+	color: #666666;
+	background: #fff;
+	border: 1px solid rgba(102, 102, 102, 0.42);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	}
+	.txtbox2
+{ margin-left:20px;
+    font: 14px;
+	width: 59%;
+	height:60px;
+	padding: 9px;
+	color: #666666;
+	background: #fff;
+	border:1px solid rgba(102, 102, 102, 0.42);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	}
+	.txtbox1
+
+{ margin-left:20px;
+    font: 14px;
+	width: 59%;
+	height:120px;
+	padding: 9px;
+	color: #666666;
+	background: #fff;
+	border: 1px solid rgba(102, 102, 102, 0.42);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-webkit-transition: 200ms;
+	-moz-transition: 200ms;
+	}
+.txtarea
+{
+margin-top:-18px;
+margin-left:720px;
+
+}
+
+.txtarea p
+{
+color:#ff0000;
+font-size:18px;
+font-weight:500;
+    padding-left: 10px;
+    margin-top: 0px;
+}
+.txtarea1
+{
+margin-top:-140px;
+margin-left:650px;
+}
+.txtarea1 p
+{
+color:#006362;
+font-size:14px;
+font-weight:500;
+}
+.submit
+{
+border: 1px solid #ddd;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+width:100px;
+height:40px;
+margin-top:8px;
+text-align:center;
+font-size:14px;
+background:#003b5b;
+padding:10px 3px;
+color:#FFFFFF;
+margin-bottom:40px;
+margin-left:20px; font-weight:500;
+}
+
